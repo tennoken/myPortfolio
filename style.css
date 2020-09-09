@@ -88,6 +88,10 @@ p {
   background: var(--color-blue);
 }
 
+.navbar__logo {
+  padding-left: 20px;
+}
+
 .navbar__menu {
   display: flex;
 }
@@ -105,4 +109,35 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-light-grey);
+}
+
+/* Home */
+#home {
+  background: url('imgs/bg.png') center/cover no-repeat;
+  text-align: center;
+  padding: 40px;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  cursor: pointer;
+  margin: 24px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  outline: none;
 }
