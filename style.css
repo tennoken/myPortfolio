@@ -378,3 +378,37 @@ p {
   margin-left: -12px;
   margin-top: 10px;
 }
+
+/* Testimonial */
+
+#testimonials {
+  background: var(--color-light-grey);
+}
+
+.testimoials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 20px;
+}
+
+.testimonial__speech-bubble {
+  background-color: var(--color-light-white);
+  border-radius: var(--size-border-radius);
+  padding: 20px;
+}
