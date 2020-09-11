@@ -199,6 +199,11 @@ p {
   font-size: var(--font-small);
 }
 
+.about__jobs {
+  max-width: 825px;
+  margin: auto;
+}
+
 .job {
   display: flex;
   align-items: center;
