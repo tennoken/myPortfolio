@@ -9,10 +9,13 @@
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-alice-blue: #f0f8ff;
-  --color-blue: #7e57c2;
-  --color-light-blue: #b085f5;
-  --color-dark-blue: #4d2c91;
+  --color-alice-blue: #a3daff;
+  --color-blue: #0080ff;
+  --color-light-blue: #1ec0ff;
+  --color-dark-blue: #03a6ff;
+  --color-cyan: #66d9e8;
+  --color-dark-cyan: #1098ad;
+  --color-indigo: #dbe4ff;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -260,7 +263,7 @@ p {
 
 .skill__value {
   height: 3px;
-  background: var(--color-orange);
+  background: var(--color-yellow);
 }
 
 .skillset__right {
@@ -340,6 +343,7 @@ p {
   width: 280px;
   height: 250px;
   margin: 2px;
+  /* background: var(--color-light-white); */
 }
 
 .project__img {
@@ -382,7 +386,7 @@ p {
 /* Testimonial */
 
 #testimonials {
-  background: var(--color-light-grey);
+  background: var(--color-cyan);
 }
 
 .testimoials {
@@ -411,4 +415,33 @@ p {
   background-color: var(--color-light-white);
   border-radius: var(--size-border-radius);
   padding: 20px;
+}
+
+/* Contact */
+
+#contact {
+  background: var(--color-dark-cyan);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-light-white);
+}
+
+.contact__links {
+  font-size: var(--font-large);
+}
+
+.contact__links i {
+  transition: all var(--animation-duration) ease;
+}
+
+.contact__links i:hover {
+  transform: scale(1.2);
+  color: var(--color-yellow);
 }
