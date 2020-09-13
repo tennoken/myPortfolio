@@ -474,6 +474,29 @@ p {
   color: var(--color-yellow);
 }
 
+.arrow--btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-dark-blue);
+  border: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: var(--font-medium);
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.arrow--btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* 768px  */
 @media screen and (max-width: 768px) {
   #navbar {
