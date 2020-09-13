@@ -31,3 +31,10 @@ navbarMenu.addEventListener('click', (event) => {
 // home 에서 contact me 버튼을 눌렀을 때 contact section으로 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => scrollToSection('#contact'));
+
+//
+const homeContainer = document.querySelector('.home__container');
+const homeHeight = homeContainer.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
+});
