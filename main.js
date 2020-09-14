@@ -17,6 +17,7 @@ document.addEventListener('scroll', () => {
   } else {
     navbar.classList.remove('navbar--dark');
   }
+  navbarMenu.classList.remove('open');
 });
 
 // navbar 메뉴 클릭 시 해당 section으로 이동
@@ -36,6 +37,13 @@ navbarMenu.addEventListener('click', (event) => {
   // });
 
   scrollToSection(link);
+});
+
+// 햄버거 버튼 클릭 시
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbar.classList.add('navbar--dark');
+  navbarMenu.classList.toggle('open');
 });
 
 // home 에서 contact me 버튼을 눌렀을 때 contact section으로 이동
