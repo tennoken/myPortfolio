@@ -123,6 +123,7 @@ p {
 
 .navbar__menu {
   display: flex;
+  cursor: pointer;
 }
 
 .navbar__menu__item {
@@ -137,7 +138,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-light-grey);
+  background-color: var(--color-light-blue);
 }
 
 .navbar__toggle-btn {
@@ -323,6 +324,8 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
   background: transparent;
+  cursor: pointer;
+  outline: none;
 }
 
 .category__btn.active,
@@ -356,6 +359,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease;
+}
+
+.animation--out {
+  opacity: 0;
+  transform: scale(0.95) translateY(30px);
 }
 
 .project:hover .project__description {
@@ -371,7 +381,10 @@ p {
   width: 280px;
   height: 250px;
   margin: 2px;
-  /* background: var(--color-light-white); */
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
