@@ -28,14 +28,6 @@ navbarMenu.addEventListener('click', (event) => {
   const link = target.dataset.link;
   if (link == null) return;
 
-  // navarMenuItem.forEach((item) => {
-  //   if (item === event.target) {
-  //     item.classList.add('active');
-  //   } else {
-  //     item.classList.remove('active');
-  //   }
-  // });
-
   scrollToSection(link);
 });
 

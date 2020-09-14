@@ -119,6 +119,7 @@ p {
   padding: 20px;
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
+  color: var(--color-alice-blue);
 }
 
 .navbar__menu {
@@ -322,10 +323,11 @@ p {
   border: 1px solid var(--color-dark-grey);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
-  padding: 8px 48px;
+  padding: 8px 32px;
   background: transparent;
   cursor: pointer;
   outline: none;
+  position: relative;
 }
 
 .category__btn.active,
@@ -337,7 +339,7 @@ p {
 .category__btn.active .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  top: 5px;
 }
 
 .category__count {
@@ -348,10 +350,10 @@ p {
   line-height: 24px;
   display: inline-block;
   color: var(--color-white);
-  position: relative;
+  position: absolute;
   transition: all var(--animation-duration) ease;
+  right: 3px;
   top: -20px;
-  left: 4px;
   opacity: 0;
 }
 
@@ -512,10 +514,23 @@ p {
 
 /* 768px  */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-blue);
+  }
+
+  .section {
+    padding: 42px 16px;
   }
 
   .navbar__menu {
@@ -532,14 +547,26 @@ p {
   .navbar__toggle-btn {
     display: block;
     cursor: pointer;
+    right: 22px;
+    top: 18px;
+  }
+
+  .home__avatar {
+    width: 220px;
+    height: 220px;
+  }
+
+  .home__title {
+    font-size: var(--font-medium);
   }
 
   .about__majors {
     flex-direction: column;
+    padding: 30px 0;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
@@ -550,8 +577,29 @@ p {
     flex-grow: 1;
   }
 
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin: 10px;
+  }
+
+  .testimonial__speech-bubble {
+    order: 1;
+  }
+
+  .arrow--btn {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
   }
 }
